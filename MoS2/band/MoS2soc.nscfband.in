@@ -1,0 +1,55 @@
+&CONTROL
+    calculation   = 'bands'    
+    prefix        = 'MoS2soc'
+    wf_collect    = .true.
+    etot_conv_thr = 1.0000000000d-05,
+    forc_conv_thr = 1.0000000000d-04,
+    pseudo_dir    = '../pseudo/',
+    outdir        = './work/',
+    verbosity     = 'high'
+/
+
+&SYSTEM
+    ibrav       = 0,
+    nat         = 6,
+    ntyp        = 2,
+    ecutwfc     = 60.0,  
+    ecutrho     = 540.0,      
+    occupations = 'smearing',
+    smearing    = 'cold',
+    noncolin    = .true.,
+    lspinorb    = .true.,
+    degauss     = 0.02,  
+    nbnd        = 104
+/
+
+&ELECTRONS
+    diagonalization  = 'david',
+    conv_thr         = 1.0000000000d-09,
+    mixing_beta      = 0.15
+/
+
+CELL_PARAMETERS (angstrom)
+  3.125553   0.000000   0.000000
+  0.000000   5.649882  -0.015712
+  0.000000   0.375691  30.215182
+
+ATOMIC_SPECIES
+Mo     95.95000  Mo.rel-pbesol-spn-rrkjus_psl.1.0.0.UPF
+S      32.07000  S.rel-pbesol-n-rrkjus_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS (crystal)
+Mo      0.500000   0.420084   0.587449
+Mo      0.000000   0.022079   0.592389
+S       0.500000   0.135764   0.647196
+S       0.000000   0.641566   0.634085
+S       0.000000   0.306399   0.532642
+S       0.500000   0.800597   0.545753
+
+K_POINTS (crystal_b)
+5
+0.50000  0.00000  0.00000  50 !X
+0.00000  0.00000  0.00000  60 !G
+0.00000  0.50000  0.00000  50 !Y
+0.50000  0.50000  0.00000  50 !M
+0.00000  0.00000  0.00000  60 !G

@@ -1,0 +1,6 @@
+&BANDS
+ outdir   = './work/',
+ prefix   = 'MoS2soc',
+ filband  = 'MoS2soc.bands',
+ lsym     = .true.
+/

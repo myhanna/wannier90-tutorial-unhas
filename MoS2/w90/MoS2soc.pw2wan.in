@@ -1,0 +1,8 @@
+&inputpp 
+   outdir      = './work/', 
+   prefix      = 'MoS2soc'
+   seedname    = 'MoS2soc'   
+   write_mmn   = .true.
+   write_amn   = .true.
+   write_unk   = .false.      
+/
